@@ -1,0 +1,578 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\shared\\components\\productsummary\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\shared\\components\\productsummary\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\shared\\components\\customersummary\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\shared\\components\\customersummary\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\role\\assignrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\role\\assignrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\products\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\products\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\viewcomponents\\customersummaryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\viewcomponents\\customersummaryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\viewcomponents\\productsummaryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\viewcomponents\\productsummaryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\models\\dbmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\models\\dbmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Migrations\\20260408180107_ScriptB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NexoraSuite\\Migrations\\20260408180107_ScriptB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\data\\migrations\\20260408150610_scripta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\data\\migrations\\20260408150610_scripta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\data\\migrations\\00000000000000_createidentityschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\data\\migrations\\00000000000000_createidentityschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|e:\\github\\project\\7. core\\nexorasuite\\nexorasuite\\nexorasuite.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BD000AA3-6D62-4E5D-B187-8BF0C1DE8D9A}|NexoraSuite\\NexoraSuite.csproj|solutionrelative:nexorasuite\\nexorasuite.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 56,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Products\\Edit.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Products\\Edit.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Products\\Edit.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Products\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T16:03:48.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Products\\Index.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T15:59:59.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AssignRole.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Role\\AssignRole.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Role\\AssignRole.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Role\\AssignRole.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Role\\AssignRole.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T16:06:10.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Role\\Index.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Role\\Index.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Role\\Index.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Role\\Index.cshtml",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T16:05:21.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Shared\\Components\\CustomerSummary\\Default.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Shared\\Components\\CustomerSummary\\Default.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Shared\\Components\\CustomerSummary\\Default.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Shared\\Components\\CustomerSummary\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T16:10:07.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Shared\\Components\\ProductSummary\\Default.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Shared\\Components\\ProductSummary\\Default.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Shared\\Components\\ProductSummary\\Default.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Shared\\Components\\ProductSummary\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T16:11:07.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAAAM0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T16:11:47.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T14:59:34.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\appsettings.json",
+              "RelativeDocumentMoniker": "NexoraSuite\\appsettings.json",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\appsettings.json",
+              "RelativeToolTip": "NexoraSuite\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-08T15:09:37.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "libman.json",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\libman.json",
+              "RelativeDocumentMoniker": "NexoraSuite\\libman.json",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\libman.json",
+              "RelativeToolTip": "NexoraSuite\\libman.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-08T16:15:32.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Program.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Program.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Program.cs",
+              "RelativeToolTip": "NexoraSuite\\Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T14:57:42.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "NexoraSuite\\ScaffoldingReadMe.txt",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "NexoraSuite\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-04-08T15:19:00.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Customers\\Index.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Customers\\Index.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Customers\\Index.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Customers\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T15:50:24.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAABoAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T15:52:00.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Products\\Create.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Products\\Create.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Products\\Create.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Products\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T16:02:40.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T15:52:20.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CustomerSummaryViewComponent.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\ViewComponents\\CustomerSummaryViewComponent.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\ViewComponents\\CustomerSummaryViewComponent.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\ViewComponents\\CustomerSummaryViewComponent.cs",
+              "RelativeToolTip": "NexoraSuite\\ViewComponents\\CustomerSummaryViewComponent.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:45:39.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductSummaryViewComponent.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\ViewComponents\\ProductSummaryViewComponent.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\ViewComponents\\ProductSummaryViewComponent.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\ViewComponents\\ProductSummaryViewComponent.cs",
+              "RelativeToolTip": "NexoraSuite\\ViewComponents\\ProductSummaryViewComponent.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:46:36.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Products.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Models\\Products.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Models\\Products.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Models\\Products.cs",
+              "RelativeToolTip": "NexoraSuite\\Models\\Products.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:43:23.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DbModels.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Models\\DbModels.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Models\\DbModels.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Models\\DbModels.cs",
+              "RelativeToolTip": "NexoraSuite\\Models\\DbModels.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswCwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:41:40.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20260408180107_ScriptB.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Migrations\\20260408180107_ScriptB.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Migrations\\20260408180107_ScriptB.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Migrations\\20260408180107_ScriptB.cs",
+              "RelativeToolTip": "NexoraSuite\\Migrations\\20260408180107_ScriptB.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwCoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T18:01:07.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "00000000000000_CreateIdentitySchema.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "RelativeToolTip": "NexoraSuite\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T14:56:14.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Controllers\\RoleController.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "NexoraSuite\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:39:34.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Controllers\\ProductsController.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "NexoraSuite\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAIwAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:33:47.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Controllers\\CustomersController.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "NexoraSuite\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:37:06.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Data\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Data\\ApplicationUser.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Data\\ApplicationUser.cs",
+              "RelativeToolTip": "NexoraSuite\\Data\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T14:50:06.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20260408150610_ScriptA.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Data\\Migrations\\20260408150610_ScriptA.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Data\\Migrations\\20260408150610_ScriptA.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Data\\Migrations\\20260408150610_ScriptA.cs",
+              "RelativeToolTip": "NexoraSuite\\Data\\Migrations\\20260408150610_ScriptA.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAgwBoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:06:10.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAUwDoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T15:20:41.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "NexoraSuite\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:32:07.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "NexoraSuite\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAwEsAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:24:49.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "NexoraSuite\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "NexoraSuite\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-08T15:22:09.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "NexoraSuite\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "NexoraSuite\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T14:46:31.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "NexoraSuite.csproj",
+              "DocumentMoniker": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\NexoraSuite.csproj",
+              "RelativeDocumentMoniker": "NexoraSuite\\NexoraSuite.csproj",
+              "ToolTip": "E:\\GitHub\\Project\\7. Core\\NexoraSuite\\NexoraSuite\\NexoraSuite.csproj",
+              "RelativeToolTip": "NexoraSuite\\NexoraSuite.csproj",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-08T14:42:53.765Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

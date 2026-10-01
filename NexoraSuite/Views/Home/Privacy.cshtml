@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "Privacy & Data Protection";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+            <div class="display-5 fw-bold text-dark mb-3 animate__animated animate__fadeIn">
+                <i class="fas fa-shield-alt text-primary me-2"></i>Privacy <span class="text-primary">Policy</span>
+            </div>
+            <p class="text-muted lead">আপনার ডেটার নিরাপত্তা এবং গোপনীয়তা আমাদের কাছে অগ্রাধিকার। আমরা কিভাবে আপনার তথ্য সুরক্ষিত রাখি তা এখানে বিস্তারিত দেওয়া হলো।</p>
+            <div class="badge bg-soft-primary text-primary px-3 py-2 rounded-pill shadow-sm">
+                <i class="far fa-calendar-alt me-1"></i> Last Updated: February 2026
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card border-0 shadow-lg overflow-hidden" style="border-radius: 30px; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                <div class="card-body p-4 p-md-5">
+
+                    <div class="d-flex align-items-start mb-5">
+                        <div class="icon-shape bg-primary text-white shadow-lg rounded-4 p-3 me-4">
+                            <i class="fas fa-fingerprint fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-2">What We Collect</h4>
+                            <p class="text-secondary">সিস্টেমটি সঠিকভাবে পরিচালনার জন্য আমরা নিম্নোক্ত তথ্যগুলো সংগ্রহ করি:</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>ইউজার প্রোফাইল (নাম, ইমেইল এবং রোল)।</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>ইনভেন্টরি ট্র্যাকিং লগ (কে কোন পণ্য এডিট বা ডিলিট করেছে)।</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>ব্রাউজার সেশন এবং সিকিউরিটি কুকিজ।</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-5">
+                        <div class="icon-shape bg-info text-white shadow-lg rounded-4 p-3 me-4">
+                            <i class="fas fa-user-lock fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-2">How We Protect</h4>
+                            <p class="text-secondary">আপনার ডেটার সর্বোচ্চ নিরাপত্তা নিশ্চিত করতে আমরা ব্যবহার করি:</p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-4 bg-white shadow-sm h-100">
+                                        <h6 class="fw-bold"><i class="fas fa-key text-info me-2"></i>Identity Hashing</h6>
+                                        <small class="text-muted">পাসওয়ার্ডগুলো ASP.NET Identity ব্যবহার করে এনক্রিপ্ট করা হয়।</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-4 bg-white shadow-sm h-100">
+                                        <h6 class="fw-bold"><i class="fas fa-user-shield text-info me-2"></i>RBAC System</h6>
+                                        <small class="text-muted">রোল-বেসড অথেনটিকেশনের মাধ্যমে ডেটা অ্যাক্সেস কন্ট্রোল করা হয়।</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-light rounded-5 p-4 d-md-flex align-items-center justify-content-between">
+                        <div class="mb-3 mb-md-0">
+                            <h5 class="fw-bold mb-1">Have questions about your data?</h5>
+                            <p class="text-muted mb-0 small">আমাদের সাপোর্ট টিমের সাথে যোগাযোগ করুন যেকোনো তথ্যের জন্য।</p>
+                        </div>
+                        <a href="mailto:admin@example.com" class="btn btn-dark rounded-pill px-4 py-2 shadow-sm transition-hover">
+                            Contact Admin <i class="fas fa-paper-plane ms-2"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-5 mb-4">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary btn-sm rounded-pill px-4">
+                    <i class="fas fa-long-arrow-alt-left me-1"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        min-vh-100;
+    }
+
+    .bg-soft-primary {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+
+    .icon-shape {
+        min-width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover .icon-shape {
+        transform: rotate(-10deg) scale(1.1);
+    }
+
+    .transition-hover {
+        transition: all 0.3s ease;
+    }
+
+        .transition-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+    .rounded-5 {
+        border-radius: 20px !important;
+    }
+
+    ul li i {
+        font-size: 0.9rem;
+    }
+</style>

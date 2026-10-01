@@ -1,0 +1,191 @@
+﻿@model IEnumerable<NexoraSuite.Models.Product>
+@{
+    ViewData["Title"] = "Product Dashboard";
+}
+
+<div class="container-fluid py-4 bg-light min-vh-100">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card border-0 shadow-lg overflow-hidden" style="border-radius: 20px;">
+                <div class="card-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-8 p-4 bg-white">
+                            <h2 class="fw-bold text-dark"><i class="fas fa-box-open text-primary me-2"></i> Inventory Analytics</h2>
+                            <p class="text-muted">Welcome back, <span class="badge bg-soft-primary text-primary">@User.Identity?.Name</span>. Monitor and manage your global stock levels in real-time.</p>
+
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="@Url.Action("Create", "Products")" class="btn btn-primary px-4 rounded-pill shadow-sm">
+                                    <i class="fas fa-plus-circle me-1"></i> New Product
+                                </a>
+                                <button onclick="printReport()" class="btn btn-outline-secondary px-4 rounded-pill">
+                                    <i class="fas fa-print me-1"></i> Print
+                                </button>
+                                <button onclick="exportData()" class="btn btn-outline-success px-4 rounded-pill">
+                                    <i class="fas fa-file-excel me-1"></i> Export
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-none d-md-flex align-items-center justify-content-center bg-primary text-white p-4"
+                             style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;">
+                            <div class="text-center">
+                                <h1 class="display-4 fw-bold mb-0">@Model.Count()</h1>
+                                <p class="small text-uppercase opacity-75">Active SKU Items</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        @await Component.InvokeAsync("ProductSummary")
+    </div>
+
+    <div class="card border-0 shadow-sm" style="border-radius: 20px;">
+        <div class="card-header bg-white border-0 py-3">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h5 class="mb-0 fw-bold"><i class="fas fa-list text-muted me-2"></i>Product Catalog</h5>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="input-group input-group-sm rounded-pill border overflow-hidden">
+                        <span class="input-group-text bg-white border-0"><i class="fas fa-search text-muted"></i></span>
+                        <input type="text" class="form-control border-0" placeholder="Filter inventory...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="bg-light">
+                        <tr>
+                            <th class="ps-4 border-0 text-muted small text-uppercase">SKU Code</th>
+                            <th class="border-0 text-muted small text-uppercase">Product</th>
+                            <th class="border-0 text-muted small text-uppercase">Category</th>
+                            <th class="border-0 text-muted small text-uppercase text-end">Price</th>
+                            <th class="border-0 text-muted small text-uppercase text-center">Stock Level</th>
+                            <th class="pe-4 border-0 text-muted small text-uppercase text-center">Manage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            bool isOut = item.Stock == 0;
+                            bool isLow = item.Stock > 0 && item.Stock <= 5;
+
+                            <tr class="@(isOut ? "bg-soft-danger" : isLow ? "bg-soft-warning" : "")">
+                                <td class="ps-4"><code class="fw-bold">@item.SKU</code></td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle bg-light p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height:40px;">
+                                            <i class="fas fa-box text-primary small"></i>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold text-dark">@item.Name</div>
+                                            @if (isOut)
+                                            {
+                                                <span class="badge rounded-pill bg-danger" style="font-size: 10px;">Out of Stock</span>
+                                            }
+                                            else if (isLow)
+                                            {
+
+                                                <span class="badge rounded-pill bg-warning text-dark" style="font-size: 10px;">Low Stock</span>
+                                            }
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-light text-dark rounded-pill border">@item.Category</span></td>
+                                <td class="text-end fw-bold">৳@item.Price.ToString("N2")</td>
+                                <td class="text-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="progress w-50 me-2" style="height: 6px;">
+                                            <div class="progress-bar @(isOut ? "bg-danger" : isLow ? "bg-warning" : "bg-success")"
+                                                 style="width: @(Math.Min(item.Stock * 10, 100))%"></div>
+                                        </div>
+                                        <span class="small fw-bold">@item.Stock</span>
+                                    </div>
+                                </td>
+                                <td class="text-center pe-4">
+                                    <div class="btn-group shadow-sm rounded">
+                                        <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-white btn-sm border" title="Edit Item">
+                                            <i class="fas fa-edit text-info"></i>
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-white btn-sm border"
+                                           onclick="return confirm('Archive this product?')" title="Delete Item">
+                                            <i class="fas fa-trash text-danger"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg-soft-primary {
+        background-color: rgba(99, 102, 241, 0.1);
+    }
+
+    .bg-soft-danger {
+        background-color: rgba(239, 68, 68, 0.05);
+    }
+
+    .bg-soft-warning {
+        background-color: rgba(245, 158, 11, 0.05);
+    }
+
+    .table thead th {
+        font-weight: 600;
+        padding: 15px 10px;
+    }
+
+    .table tbody td {
+        padding: 18px 10px;
+    }
+
+    .progress {
+        border-radius: 10px;
+        background-color: #e9ecef;
+    }
+
+    .btn-white {
+        background: #fff;
+    }
+
+        .btn-white:hover {
+            background: #f8f9fa;
+        }
+
+    .table-responsive::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+    }
+
+    .table tbody tr {
+        transition: all 0.2s ease;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+        .table tbody tr:hover {
+            background-color: #f8fafc !important;
+            transform: scale(1.002);
+        }
+</style>
+
+<script>
+    function exportData() {
+        Swal.fire('Exporting...', 'Preparing your inventory report', 'success');
+    }
+    function printReport() { window.print(); }
+</script>

@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RoleBase</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --sidebar-bg: #ffffff;
+            --main-bg: #f8fafc;
+            --accent-color: #6366f1;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--main-bg);
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.4rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #64748b !important;
+            margin: 0 5px;
+            padding: 8px 16px !important;
+            border-radius: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+            .nav-link:hover {
+                color: var(--accent-color) !important;
+                background: rgba(99, 102, 241, 0.08);
+                transform: translateY(-2px);
+            }
+
+            .nav-link.active-link {
+                color: white !important;
+                background: var(--primary-gradient);
+                box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            }
+
+        .main-content {
+            min-height: calc(100vh - 160px);
+            padding-top: 40px;
+            padding-bottom: 40px;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @@keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+        .footer-custom {
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+            .footer-link:hover {
+                color: var(--accent-color);
+            }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c7d2fe;
+            border-radius: 10px;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #818cf8;
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <i class="fa fa-solid fa-shield-halved me-2"></i>ROLE<span style="font-weight:300">BASE</span>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" && ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" ? "active-link" : "")"
+                               asp-controller="Home" asp-action="Index">
+                                <i class="fa fa-solid fa-house-chimney me-1 small"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Products" ? "active-link" : "")"
+                               asp-controller="Products" asp-action="Index">
+                                <i class="fa fa-solid fa-box-archive me-1 small"></i> Products
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="roleDropdown" role="button" data-bs-toggle="dropdown">
+                                <i class="fa fa-solid fa-user-gear me-1 small"></i> Access Control
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-lg p-2" style="border-radius:12px;">
+                                <li><a class="dropdown-item rounded-3" asp-controller="Role" asp-action="Index">Role Manager</a></li>
+                                <li><a class="dropdown-item rounded-3" asp-controller="Role" asp-action="AssignRole">Assign Permission</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Customers" ? "active-link" : "")"
+                               asp-controller="Customers" asp-action="Index">
+                                <i class="fa fa-solid fa-users me-1 small"></i> Customers
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container main-content">
+        @RenderBody()
+    </main>
+
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="fw-bold text-secondary">&copy; 2026 RoleBase Auth System</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a asp-controller="Home" asp-action="Privacy" class="footer-link me-3">Privacy</a>
+                    <a href="#" class="footer-link me-3">Terms</a>
+                    <a href="#" class="footer-link"><i class="fa-brands fa-github fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar-custom').style.padding = "0.5rem 1.5rem";
+                document.querySelector('.navbar-custom').style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
+            } else {
+                document.querySelector('.navbar-custom').style.padding = "0.8rem 1.5rem";
+                document.querySelector('.navbar-custom').style.boxShadow = "none";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+﻿@model NexoraSuite.Models.Product
+
+@{
+    ViewData["Title"] = "Add New Product";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card border-0 shadow-lg position-relative overflow-hidden" style="border-radius: 30px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(15px);">
+
+                <div style="height: 6px; background: linear-gradient(90deg, #00b09b 0%, #96c93d 100%);"></div>
+
+                <div class="card-body p-5">
+                    <div class="row align-items-center mb-5">
+                        <div class="col-auto">
+                            <div class="icon-box bg-success text-white shadow-lg d-flex align-items-center justify-content-center"
+                                 style="width: 65px; height: 65px; border-radius: 20px; font-size: 28px;">
+                                <i class="fas fa-boxes-stacked"></i>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h2 class="fw-bold text-dark mb-0">Inventory Registry</h2>
+                            <p class="text-muted mb-0">Add your new stock item</p>
+                        </div>
+                    </div>
+
+                    <form asp-action="Create" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-4"></div>
+
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="form-floating shadow-sm">
+                                    <input name="Name" class="form-control border-0 bg-light rounded-4 px-4" placeholder="Name" required style="height: 70px; font-size: 1.1rem;" />
+                                    <label class="text-muted px-4"><i class="fas fa-signature me-2"></i>Product Display Name</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating shadow-sm">
+                                    <select name="Category" class="form-select border-0 bg-light rounded-4 px-4" style="height: 70px;">
+                                        <option value="" disabled selected>Choose Category</option>
+                                        <option value="Electronics">Electronics 📱</option>
+                                        <option value="Clothing">Clothing 👕</option>
+                                        <option value="Groceries">Groceries 🍏</option>
+                                    </select>
+                                    <label class="text-muted px-4"><i class="fas fa-layer-group me-2"></i>Classification</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating shadow-sm">
+                                    <input name="SKU" class="form-control border-0 bg-light rounded-4 px-4" placeholder="SKU" style="height: 70px;" />
+                                    <label class="text-muted px-4"><i class="fas fa-barcode me-2"></i>Unique SKU/Code</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group shadow-sm rounded-4 overflow-hidden">
+                                    <span class="input-group-text border-0 bg-success text-white px-4 fs-5"><i class="fas fa-dollar-sign"></i></span>
+                                    <div class="form-floating flex-grow-1">
+                                        <input name="Price" type="number" step="0.01" class="form-control border-0 bg-light py-4" placeholder="Price" required />
+                                        <label class="text-muted">Unit Valuation</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group shadow-sm rounded-4 overflow-hidden">
+                                    <span class="input-group-text border-0 bg-info text-white px-4 fs-5"><i class="fas fa-cubes"></i></span>
+                                    <div class="form-floating flex-grow-1">
+                                        <input name="Stock" type="number" class="form-control border-0 bg-light py-4" placeholder="Stock" value="0" />
+                                        <label class="text-muted">Opening Quantity</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating shadow-sm">
+                                    <textarea name="Description" class="form-control border-0 bg-light rounded-4 px-4 pt-4" placeholder="Description" style="height: 150px;"></textarea>
+                                    <label class="text-muted px-4"><i class="fas fa-align-left me-2"></i>Brief Product Summary</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 pt-3 border-top g-3">
+                            <div class="col-md-4 order-2 order-md-1">
+                                <a asp-action="Index" class="btn btn-light w-100 py-3 rounded-4 fw-bold text-secondary shadow-sm transition-hover">
+                                    <i class="fas fa-chevron-left me-2"></i>Discard Changes
+                                </a>
+                            </div>
+                            <div class="col-md-8 order-1 order-md-2">
+                                <button type="submit" class="btn btn-success w-100 py-3 rounded-4 fw-bold shadow-lg border-0 transition-hover"
+                                        style="background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);">
+                                    <i class="fas fa-cloud-arrow-up me-2"></i>Save Data
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f0f2f5;
+    }
+
+    .rounded-4 {
+        border-radius: 18px !important;
+    }
+
+    .form-control:focus, .form-select:focus {
+        background-color: #ffffff !important;
+        box-shadow: 0 0 0 4px rgba(0, 176, 155, 0.15) !important;
+        color: #333;
+    }
+
+    .transition-hover {
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+        .transition-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+        }
+
+    .icon-box {
+        animation: pulse-green 2s infinite;
+    }
+
+    @@keyframes pulse-green {
+        0% {
+            box-shadow: 0 0 0 0 rgba(0, 176, 155, 0.4);
+        }
+
+        70% {
+            box-shadow: 0 0 0 15px rgba(0, 176, 155, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(0, 176, 155, 0);
+        }
+    }
+
+    .input-group-text {
+        min-width: 65px;
+        justify-content: center;
+    }
+</style>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

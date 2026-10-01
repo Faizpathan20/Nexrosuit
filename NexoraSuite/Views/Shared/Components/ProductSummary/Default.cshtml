@@ -1,0 +1,28 @@
+﻿@model dynamic
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-light text-center p-3">
+            <h6 class="text-muted">Total Products</h6>
+            <h3 class="text-primary">@Model.Total</h3>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-light text-center p-3">
+            <h6 class="text-muted">In Stock</h6>
+            <h3 class="text-success">@Model.InStock</h3>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-light text-center p-3">
+            <h6 class="text-muted">Low Stock</h6>
+            <h3 class="text-danger">@Model.LowStock</h3>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-light text-center p-3">
+            <h6 class="text-muted">Orders Today</h6>
+            <h3 class="text-info">@Model.Orders</h3>
+        </div>
+    </div>
+</div>

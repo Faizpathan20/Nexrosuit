@@ -1,0 +1,146 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid p-0">
+    <div class="hero-section text-white py-5 mb-5 shadow" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); border-radius: 0 0 50px 50px;">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown">
+                        NexGen <span class="text-warning">Inventory</span>
+                    </h1>
+                    <p class="lead mb-4 opacity-75">
+                        আপনার ব্যবসার ইনভেন্টরি, রোল ম্যানেজমেন্ট এবং প্রোডাক্ট ট্র্যাকিং করুন আরও সহজে এবং স্মার্টলি।
+                        একটি সেন্ট্রাল ড্যাশবোর্ড থেকেই সবকিছু নিয়ন্ত্রণ করুন।
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a asp-controller="Products" asp-action="Index" class="btn btn-warning btn-lg px-4 fw-bold shadow-sm rounded-pill transition-hover">
+                            <i class="fas fa-boxes-stacked me-2"></i>Manage Inventory
+                        </a>
+                        <a asp-controller="Role" asp-action="Index" class="btn btn-outline-light btn-lg px-4 rounded-pill transition-hover">
+                            <i class="fas fa-user-shield me-2"></i>Access Control
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center animate__animated animate__fadeInRight">
+                    <img src="~/images/images.png" alt="Inventory Illustration" style="max-width: 80%; filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.2));">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4 transition-hover" style="border-radius: 25px;">
+                    <div class="icon-circle bg-soft-primary text-primary mx-auto mb-3">
+                        <i class="fas fa-bolt fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold">Fast Tracking</h5>
+                    <p class="text-muted small">রিয়েল-টাইম স্টক আপডেট এবং SKU ট্র্যাকিং সিস্টেম।</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4 transition-hover" style="border-radius: 25px;">
+                    <div class="icon-circle bg-soft-success text-success mx-auto mb-3">
+                        <i class="fas fa-shield-halved fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold">Secure Access</h5>
+                    <p class="text-muted small">Identity Role-Based অথেন্টিকেশন যা নিশ্চিত করবে সর্বোচ্চ নিরাপত্তা।</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4 transition-hover" style="border-radius: 25px;">
+                    <div class="icon-circle bg-soft-info text-info mx-auto mb-3">
+                        <i class="fas fa-chart-line fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold">Smart Analytics</h5>
+                    <p class="text-muted small">ইনভেন্টরি ডেটা এবং সামারি দেখার জন্য আধুনিক ড্যাশবোর্ড।</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-4">
+            <div class="col-12 text-center mb-4">
+                <h3 class="fw-bold">Quick Navigation</h3>
+                <div class="divider mx-auto"></div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a asp-controller="Products" asp-action="Create" class="nav-card text-decoration-none shadow-sm d-flex align-items-center p-4">
+                    <div class="bg-success text-white p-3 rounded-3 me-3"><i class="fas fa-plus fs-4"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-bold text-dark">Add New Product</h6>
+                        <span class="text-muted small">সিস্টেমে নতুন আইটেম যুক্ত করুন</span>
+                    </div>
+                    <i class="fas fa-chevron-right ms-auto text-muted"></i>
+                </a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a asp-controller="Role" asp-action="AssignRole" class="nav-card text-decoration-none shadow-sm d-flex align-items-center p-4">
+                    <div class="bg-info text-white p-3 rounded-3 me-3"><i class="fas fa-user-plus fs-4"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-bold text-dark">Assign User Roles</h6>
+                        <h6 class="mb-0 fw-bold text-dark text-muted small">ইউজার পারমিশন সেট করুন</h6>
+                    </div>
+                    <i class="fas fa-chevron-right ms-auto text-muted"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f8fafc;
+    }
+
+    .bg-soft-primary {
+        background: rgba(59, 130, 246, 0.1);
+    }
+
+    .bg-soft-success {
+        background: rgba(34, 197, 94, 0.1);
+    }
+
+    .bg-soft-info {
+        background: rgba(6, 182, 212, 0.1);
+    }
+
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .transition-hover {
+        transition: all 0.3s ease;
+    }
+
+        .transition-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+        }
+
+    .nav-card {
+        background: white;
+        border-radius: 15px;
+        transition: all 0.2s ease;
+    }
+
+        .nav-card:hover {
+            background: #f1f5f9;
+            transform: scale(1.02);
+        }
+
+    .divider {
+        width: 60px;
+        height: 4px;
+        background: #3b82f6;
+        border-radius: 2px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

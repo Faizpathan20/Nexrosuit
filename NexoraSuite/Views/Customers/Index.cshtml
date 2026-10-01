@@ -1,0 +1,471 @@
+﻿@model IEnumerable<NexoraSuite.Models.Customer>
+@{
+    ViewData["Title"] = "Customer Hub";
+}
+
+<link href="~/lib/animate.css/animate.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="main-content-wrapper p-4" style="font-family: 'Poppins', sans-serif; background: #f0f2f5; min-height: 100vh;">
+
+    <div class="row align-items-center mb-4 animate__animated animate__fadeInDown">
+        <div class="col-md-7">
+            <h2 class="fw-bold text-dark mb-1">
+                <span class="p-2 bg-primary rounded-3 text-white me-2 shadow"><i class="fas fa-user-tie"></i></span>
+                Customer <span class="text-primary">Relationship</span> Management
+            </h2>
+            <p class="text-muted ms-5">Manage your client base, logistics, and credit terms in one place.</p>
+        </div>
+        <div class="col-md-5">
+            <div class="glass-card p-3 shadow-sm border-0 animate__animated animate__fadeInRight">
+                @await Component.InvokeAsync("CustomerSummary")
+            </div>
+        </div>
+    </div>
+
+    <form id="customerForm" method="post" asp-action="Save" enctype="multipart/form-data">
+        <div class="action-bar sticky-top shadow-lg py-3 px-4 mb-4 animate__animated animate__fadeIn">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="status-indicator">
+                    <span id="formStatusBadge" class="badge rounded-pill bg-soft-success text-success px-3 py-2">
+                        <i class="fa fa-plus-circle me-1"></i> New Entry Mode
+                    </span>
+                </div>
+                <div class="button-group">
+                    <button type="submit" id="saveBtn" class="btn btn-primary btn-action shadow-sm">
+                        <i class="fa fa-save me-2"></i>Save Customer
+                    </button>
+                    <button type="submit" id="editBtn" class="btn btn-warning btn-action shadow-sm text-white" style="display:none">
+                        <i class="fa fa-sync-alt me-2"></i>Update Record
+                    </button>
+                    <button type="button" id="deleteBtn" class="btn btn-danger btn-action shadow-sm">
+                        <i class="fa fa-trash-alt me-2"></i>Delete
+                    </button>
+                    <button type="button" onclick="resetForm()" class="btn btn-light btn-action border shadow-sm">
+                        <i class="fa fa-eraser me-2"></i>Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm p-4 mb-4 transition-hover" style="border-radius: 20px;">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="icon-shape bg-soft-primary text-primary me-3">
+                            <i class="fa fa-id-card"></i>
+                        </div>
+                        <h5 class="mb-0 fw-bold">Primary Information</h5>
+                    </div>
+
+                    <div class="row g-3">
+                        <input type="hidden" id="CustomerId" name="CustomerId" value="0" />
+
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input id="Name" name="Name" class="form-control border-0 bg-light rounded-3" required placeholder="Full Name" />
+                                <label for="Name">Full Customer Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input id="Email" name="Email" type="email" class="form-control border-0 bg-light rounded-3" placeholder="Email" />
+                                <label for="Email">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-floating mb-3">
+                                <textarea id="Address" name="Address" class="form-control border-0 bg-light rounded-3" style="height: 100px" placeholder="Address"></textarea>
+                                <label for="Address">Present Address</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating mb-3">
+                                <input id="Phone" name="Phone" class="form-control border-0 bg-light rounded-3" placeholder="Phone" />
+                                <label for="Phone">Phone Number</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating mb-3">
+                                <input id="CustomerType" name="CustomerType" class="form-control border-0 bg-light rounded-3" placeholder="Type" />
+                                <label for="CustomerType">Customer Category</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating mb-3">
+                                <input id="BusinessStart" name="BusinessStart" type="date" class="form-control border-0 bg-light rounded-3" required />
+                                <label for="BusinessStart">Partnership Since</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm p-4 transition-hover" style="border-radius: 20px;">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-shape bg-soft-info text-info me-3">
+                                <i class="fa fa-shipping-fast"></i>
+                            </div>
+                            <h5 class="mb-0 fw-bold">Delivery Nodes</h5>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-info rounded-pill px-3" onclick="addAddressRow()">
+                            <i class="fa fa-plus me-1"></i> New Location
+                        </button>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-borderless align-middle">
+                            <thead>
+                                <tr class="text-muted small text-uppercase">
+                                    <th>Street Address</th>
+                                    <th>Contact Person</th>
+                                    <th>Contact No</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="deliveryAddressContainer">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm p-4 mb-4 transition-hover text-center" style="border-radius: 20px;">
+                    <h6 class="fw-bold mb-3 text-start text-muted">Identity Attachment</h6>
+                    <div class="profile-upload-container mb-3">
+                        <div class="image-preview-wrapper shadow-sm mx-auto">
+                            <img id="photoPreview" class="d-none" />
+                            <div id="noImageText" class="placeholder-content">
+                                <i class="fa fa-cloud-upload-alt fa-3x text-primary mb-2"></i>
+                                <p class="small mb-0">Drag photo here<br>or click to upload</p>
+                            </div>
+                            <input id="PhotoUpload" name="photo" type="file" accept="image/*" onchange="previewImage(event)" />
+                        </div>
+                    </div>
+                    <p class="text-muted x-small italic">Supports: JPG, PNG (Max 2MB)</p>
+                </div>
+
+                <div class="card border-0 shadow-sm p-4 transition-hover bg-gradient-credit" style="border-radius: 20px;">
+                    <h6 class="fw-bold mb-3 text-white">Financial Terms</h6>
+                    <div class="form-floating mb-3">
+                        <input id="CreditLimit" name="CreditLimit" type="number" class="form-control border-0 bg-white shadow-sm rounded-3 fw-bold text-success" placeholder="Credit" />
+                        <label for="CreditLimit">Authorized Credit Limit</label>
+                    </div>
+                    <div class="alert alert-light bg-opacity-25 border-0 text-success small mb-0">
+                        <i class="fa fa-info-circle me-1"></i> Limits above $50k require CFO approval.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="mt-5">
+        <div class="d-flex align-items-center mb-4">
+            <div class="icon-shape bg-soft-dark text-dark me-3">
+                <i class="fa fa-list-ul"></i>
+            </div>
+            <h4 class="fw-bold mb-0">Active Customer Registry</h4>
+        </div>
+
+        <div class="card border-0 shadow-sm overflow-hidden" style="border-radius: 20px;">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0" id="customerTable">
+                    <thead class="bg-light">
+                        <tr class="text-muted small">
+                            <th class="ps-4">UID</th>
+                            <th>Customer Name</th>
+                            <th>Contact Info</th>
+                            <th>Category</th>
+                            <th class="text-end pe-4">Credit Power</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cust in Model)
+                        {
+                            <tr id="row-@cust.CustomerId" class="customer-row" onclick="editCustomer(@cust.CustomerId)">
+                                <td class="ps-4 fw-bold text-primary">#@cust.CustomerId</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-sm bg-primary text-white me-2">@cust.Name.Substring(0, 1)</div>
+                                        <div>
+                                            <div class="fw-bold text-dark">@cust.Name</div>
+                                            <div class="small text-muted">@cust.Email</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><i class="fa fa-phone-alt me-1 small"></i> @cust.Phone</td>
+                                <td><span class="badge bg-soft-secondary text-secondary">@cust.CustomerType</span></td>
+                                <td class="text-end pe-4">
+                                    <span class="fw-bold text-success">$@cust.CreditLimit.ToString("N0")</span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg-soft-primary {
+        background: rgba(13, 110, 253, 0.1);
+    }
+
+    .bg-soft-info {
+        background: rgba(13, 202, 240, 0.1);
+    }
+
+    .bg-soft-success {
+        background: rgba(25, 135, 84, 0.1);
+    }
+
+    .bg-soft-dark {
+        background: rgba(33, 37, 41, 0.1);
+    }
+
+    .bg-soft-secondary {
+        background: rgba(108, 117, 125, 0.1);
+    }
+
+    .bg-gradient-credit {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    }
+
+    .icon-shape {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+    }
+
+    .action-bar {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        top: 10px;
+    }
+
+    .btn-action {
+        border-radius: 10px;
+        padding: 8px 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+        }
+
+    .image-preview-wrapper {
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        background: #f8f9fa;
+        border: 2px dashed #dee2e6;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    #photoPreview {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .placeholder-content {
+        padding-top: 30px;
+        color: #adb5bd;
+    }
+
+    #PhotoUpload {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .customer-row {
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+        .customer-row:hover {
+            background-color: #f8faff !important;
+        }
+
+    .avatar-sm {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .transition-hover:hover {
+        transform: scale(1.01);
+        transition: 0.3s;
+    }
+
+    .form-floating > .form-control:focus ~ label {
+        color: #0d6efd;
+    }
+</style>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/sweetalert2/sweetalert2.all.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        if ($("#deliveryAddressContainer tr").length === 0) addAddressRow();
+    });
+
+    function addAddressRow(data = null) {
+        const row = `
+            <tr class="deliveryAddressRow animate__animated animate__fadeIn">
+                <td><input class="form-control border-0 bg-light rounded-2 addr-field" value="${data ? data.address : ''}" required placeholder="Address Line" /></td>
+                <td><input class="form-control border-0 bg-light rounded-2 contact-field" value="${data ? data.contactPerson : ''}" required placeholder="Name" /></td>
+                <td><input class="form-control border-0 bg-light rounded-2 phone-field" value="${data ? data.phone : ''}" required placeholder="Phone" /></td>
+                <td class="text-center"><button type="button" class="btn btn-link text-danger" onclick="removeRow(this)"><i class="fas fa-minus-circle"></i></button></td>
+            </tr>`;
+        $("#deliveryAddressContainer").append(row);
+        reIndexAddresses();
+    }
+
+    function removeRow(btn) {
+        $(btn).closest('tr').addClass('animate__animated animate__fadeOutRight').on('animationend', function() {
+            $(this).remove();
+            reIndexAddresses();
+            if ($("#deliveryAddressContainer tr").length === 0) addAddressRow();
+        });
+    }
+
+    function reIndexAddresses() {
+        $("#deliveryAddressContainer tr").each(function(i) {
+            $(this).find(".addr-field").attr("name", `DeliveryAddresses[${i}].Address`);
+            $(this).find(".contact-field").attr("name", `DeliveryAddresses[${i}].ContactPerson`);
+            $(this).find(".phone-field").attr("name", `DeliveryAddresses[${i}].Phone`);
+        });
+    }
+
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            $("#photoPreview").attr("src", reader.result).removeClass('d-none');
+            $("#noImageText").addClass('d-none');
+        };
+        if(event.target.files[0]) reader.readAsDataURL(event.target.files[0]);
+    }
+
+    function resetForm() {
+        $("#customerForm")[0].reset();
+        $("#CustomerId").val(0);
+        $("#photoPreview").addClass('d-none');
+        $("#noImageText").removeClass('d-none');
+        $("#deliveryAddressContainer").empty();
+        addAddressRow();
+        $("#saveBtn").show();
+        $("#editBtn").hide();
+        $("#formStatusBadge").html('<i class="fas fa-plus-circle me-1"></i> New Entry Mode').removeClass('bg-soft-warning text-warning').addClass('bg-soft-success text-success');
+        $(".customer-row").removeClass("table-primary");
+    }
+
+    function editCustomer(id) {
+        $(".customer-row").removeClass("table-primary shadow-sm border-primary");
+        $(`#row-${id}`).addClass("table-primary");
+
+        $.get('/Customers/GetCustomer', { id: id }, function(response) {
+            $("#CustomerId").val(id);
+            $("#Name").val(response.name);
+            $("#Address").val(response.address);
+            $("#Phone").val(response.phone);
+            $("#CustomerType").val(response.customerType);
+            $("#Email").val(response.email);
+            $("#CreditLimit").val(response.creditLimit);
+            if(response.businessStart) $("#BusinessStart").val(response.businessStart.split('T')[0]);
+
+            if (response.photo) {
+                $("#photoPreview").attr("src", "/Images/" + response.photo).removeClass('d-none');
+                $("#noImageText").addClass('d-none');
+            } else {
+                $("#photoPreview").addClass('d-none');
+                $("#noImageText").removeClass('d-none');
+            }
+
+            $("#deliveryAddressContainer").empty();
+            if(response.deliveryAddresses.length > 0) {
+                response.deliveryAddresses.forEach(addr => addAddressRow(addr));
+            } else {
+                addAddressRow();
+            }
+
+            $("#saveBtn").hide();
+            $("#editBtn").show();
+            $("#formStatusBadge").html('<i class="fas fa-edit me-1"></i> Edit Mode: ' + response.name).removeClass('bg-soft-success text-success').addClass('bg-soft-warning text-warning');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    $("#deleteBtn").click(function() {
+        const id = $("#CustomerId").val();
+        if (id == 0) return Swal.fire('Error', 'Please select a customer first!', 'error');
+
+        Swal.fire({
+            title: 'Delete Customer?',
+            text: "This action is permanent and clears all history.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#ef4444',
+            confirmButtonText: 'Yes, Terminate'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.post('/Customers/Delete/' + id, function(res) {
+                    Swal.fire('Success', 'Record Purged', 'success').then(() => window.location.href = res.redirectTo);
+                });
+            }
+        });
+    });
+
+        $("#BusinessStart").on("change", function() {
+        const selectedDate = new Date($(this).val());
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        if (selectedDate > today) {
+            $(this).addClass("is-invalid").removeClass("bg-light");
+            Swal.fire('😡', 'You Selected future date!', 'warning');
+        } else {
+            $(this).removeClass("is-invalid").addClass("bg-light");
+        }
+    });
+
+
+        $("#customerForm").on("submit", function(e) {
+        const businessDate = new Date($("#BusinessStart").val());
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        if (businessDate > today) {
+            e.preventDefault();
+            Swal.fire({
+                icon: 'error',
+                title: '😡😡',
+                text: 'Partnership Since date can not Future!',
+                confirmButtonColor: '#3b82f6'
+            });
+            return false;
+        }
+        return true;
+    });
+</script>

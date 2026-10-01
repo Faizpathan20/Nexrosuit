@@ -1,0 +1,155 @@
+﻿@{
+    ViewData["Title"] = "Role Manager";
+}
+
+<div class="container py-4">
+    <div class="d-flex align-items-center mb-4">
+        <div class="icon-shape bg-primary text-white rounded-circle shadow-lg d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+            <i class="fa-solid fa-user-gear fs-4"></i>
+        </div>
+        <div>
+            <h2 class="fw-bold mb-0 text-dark">Role Management</h2>
+            <p class="text-muted mb-0">Define and organize system access levels</p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-5">
+            <div class="card border-0 shadow-sm h-100" style="border-radius: 20px;">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-4"><i class="fa-solid fa-plus-circle text-primary me-2"></i>Create New Role</h5>
+
+                    <form asp-action="CreateRole" asp-controller="Role" method="post">
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold text-uppercase text-secondary">Role Name</label>
+                            <div class="input-group input-group-merge shadow-none">
+                                <span class="input-group-text bg-light border-0"><i class="fa-solid fa-tag text-muted"></i></span>
+                                <input type="text" name="userRole" class="form-control bg-light border-0 py-2"
+                                       placeholder="e.g. Moderator, Manager" required />
+                            </div>
+                        </div>
+
+                        @if (TempData["msg"] != null)
+                        {
+                            <div id="roleAlert" class="alert alert-primary border-0 rounded-3 mb-4 d-flex align-items-center" role="alert">
+                                <i class="fa-solid fa-circle-info me-2"></i>
+                                <div class="small">@TempData["msg"]</div>
+                            </div>
+                        }
+
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold shadow-sm"
+                                style="border-radius: 12px; background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); border:none;">
+                            Generate Role
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card border-0 shadow-sm" style="border-radius: 20px;">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-4"><i class="fa-solid fa-list-ul text-primary me-2"></i>Available Roles</h5>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th class="border-0 rounded-start">Role Name</th>
+                                    <th class="border-0 text-center">Status</th>
+                                    <th class="border-0 text-center rounded-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.roles != null)
+                                {
+                                    @foreach (var role in ViewBag.roles)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="rounded-circle bg-soft-primary p-2 me-3" style="background: rgba(99, 102, 241, 0.1); color: #6366f1;">
+                                                        <i class="fa-solid fa-user-shield"></i>
+                                                    </div>
+                                                    <span class="fw-bold">@role.Name</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="badge bg-success-soft text-success rounded-pill px-3 py-2" style="background: #e1fcef;">Active</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <form asp-action="DeleteRole" asp-route-id="@role.Id" method="post"
+                                                      onsubmit="return confirm('Are you sure you want to delete this role?')">
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger border-0 rounded-3">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="3" class="text-center py-4 text-muted small">No roles defined yet.</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .form-control:focus {
+        background-color: #fff !important;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2) !important;
+        border: 1px solid #6366f1 !important;
+    }
+
+    .table thead th {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #64748b;
+        padding: 15px;
+    }
+
+    .table tbody td {
+        padding: 15px;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    #roleAlert {
+        animation: slideIn 0.4s ease-out;
+    }
+
+    @@keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+@if (TempData["msg"] != null)
+{
+    <script>
+        setTimeout(function () {
+            var alert = document.getElementById('roleAlert');
+            if (alert) {
+                alert.style.transition = "opacity 0.5s ease";
+                alert.style.opacity = "0";
+                setTimeout(() => alert.remove(), 500);
+            }
+        }, 3000);
+    </script>
+}
