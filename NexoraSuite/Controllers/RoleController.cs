@@ -70,8 +70,17 @@ namespace NexoraSuite.Controllers
                 {
                     if (await _roleManager.RoleExistsAsync(roleData))
                     {
-                        await _userManager.AddToRoleAsync(u, roleData);
-                        msg = "Role has been assign to user!!!";
+                        if (await _userManager.IsInRoleAsync(u, roleData))
+                        {
+                            msg = "User already has role [" + roleData + "]!";
+                        }
+                        else
+                        {
+                            var result = await _userManager.AddToRoleAsync(u, roleData);
+                            msg = result.Succeeded
+                                ? "Role [" + roleData + "] assigned to user successfully!"
+                                : "Error assigning role: " + string.Join("; ", result.Errors.Select(e => e.Description));
+                        }
                     }
                     else
                     {

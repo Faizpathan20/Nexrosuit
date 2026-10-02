@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NexoraSuite.Data;
-using NexoraSuite.Data;
 using NexoraSuite.Models;
 using System;
 
@@ -42,5 +41,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+await app.Services.SeedAdminRoleAsync(builder.Configuration["AdminSettings:AdminEmail"]);
 
 app.Run();
